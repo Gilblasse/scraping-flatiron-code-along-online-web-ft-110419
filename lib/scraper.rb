@@ -26,8 +26,7 @@ class Scraper
   end 
  
   def make_courses
-    courses = get_courses
-        courses.map do |course|
+        get_courses.map do |course|
           title = course.css("h2").text
           schedule = course.css("em").text
           description = course.css("p").text
