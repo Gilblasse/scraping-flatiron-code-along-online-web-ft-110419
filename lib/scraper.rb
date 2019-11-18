@@ -26,11 +26,11 @@ class Scraper
   end 
  
   def make_courses
-        get_courses.map do |course|
+        get_courses.map do |cours|
           course = Course.new
-          course.title = course.css("h2").text
-          course.schedule = course.css("em").text
-          course.description = course.css("p").text
+          course.title = cours.css("h2").text
+          course.schedule = cours.css("em").text
+          course.description = cours.css("p").text
         end
     
   end
